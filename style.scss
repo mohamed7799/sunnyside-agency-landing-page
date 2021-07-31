@@ -1,0 +1,130 @@
+$Soft-red: hsl(7, 99%, 70%);
+$Yellow: hsl(51, 100%, 49%);
+$Dark-desaturated-cyan-graphic-design-text: hsl(167, 40%, 24%);
+$Dark-blue--photography-text: hsl(198, 62%, 26%);
+$Dark-moderate-cyan-footer: hsl(168, 34%, 41%);
+
+$Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+$Very-dark-grayish-blue: hsl(213, 9%, 39%);
+$Dark-grayish-blue: hsl(232, 10%, 55%);
+$Grayish-blue: hsl(210, 4%, 67%);
+$White: hsl(0, 0%, 100%);
+
+//reset
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 18px;
+}
+body {
+  min-height: 100vh;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  color: white;
+  background-image: url("./imgs/desktop/image-header.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+nav {
+  position: relative;
+}
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  font-family: "Barlow", sans-serif;
+}
+
+.nav-item {
+  display: block;
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+}
+
+.selected {
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.bars {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  padding: 2rem;
+  background-color: white;
+  color: $Dark-grayish-blue;
+  right: 3%;
+  left: 3%;
+  font-family: "Barlow", sans-serif;
+  text-align: center;
+  & li {
+    padding: 1rem;
+  }
+
+  & .selected {
+    background-color: $Yellow;
+  }
+}
+
+.mobile-nav::after {
+  position: absolute;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid rgb(255, 255, 255);
+  right: 0;
+  top: -6%;
+  content: "";
+}
+
+.header-content {
+  text-align: center;
+  margin-top: 4rem;
+  & h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: "Fraunces", serif;
+    margin-bottom: 4rem;
+    letter-spacing: 5px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+//media
+
+@media screen and (max-width: 650px) {
+  .nav-item {
+    display: none;
+  }
+
+  .bars {
+    display: block;
+  }
+}

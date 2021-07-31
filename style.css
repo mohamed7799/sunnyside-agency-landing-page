@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  min-height: 100vh;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  color: white;
+  background-image: url("./imgs/desktop/image-header.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+nav {
+  position: relative;
+}
+
+.desktop-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  font-family: "Barlow", sans-serif;
+}
+
+.nav-item {
+  display: block;
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+}
+
+.selected {
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.bars {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  padding: 2rem;
+  background-color: white;
+  color: #818498;
+  right: 3%;
+  left: 3%;
+  font-family: "Barlow", sans-serif;
+  text-align: center;
+}
+
+.mobile-nav li {
+  padding: 1rem;
+}
+
+.mobile-nav .selected {
+  background-color: #fad400;
+}
+
+.mobile-nav::after {
+  position: absolute;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid white;
+  right: 0;
+  top: -6%;
+  content: "";
+}
+
+.header-content {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.header-content h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-family: "Fraunces", serif;
+  margin-bottom: 4rem;
+  letter-spacing: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 650px) {
+  .nav-item {
+    display: none;
+  }
+  .bars {
+    display: block;
+  }
+}
