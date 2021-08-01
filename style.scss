@@ -58,6 +58,10 @@ nav {
   border-radius: 20px;
   font-family: "Fraunces", serif;
   text-transform: uppercase;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.473);
+    color: white;
+  }
 }
 
 .logo {
@@ -117,14 +121,92 @@ nav {
   display: none;
 }
 
+.text-img {
+  display: flex;
+  & > * {
+    flex: 1;
+  }
+}
+
+.text-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  margin: 5rem;
+  & h2 {
+    color: $Very-dark-desaturated-blue;
+    font-family: "Fraunces", serif;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  & p {
+    line-height: 1.6;
+    font-family: "Barlow", sans-serif;
+    color: $Dark-grayish-blue;
+    margin: 2rem 0rem;
+  }
+
+  & button {
+    background: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+    font-family: "Fraunces", serif;
+    font-weight: bold;
+  }
+}
+
+.red-line:hover {
+  text-decoration: underline;
+  text-decoration-color: $Soft-red;
+
+  text-decoration-thickness: 5px;
+}
+
+.yellow-line:hover {
+  text-decoration: underline;
+  text-decoration-color: $Yellow;
+
+  text-decoration-thickness: 5px;
+}
+
+.desktop-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.mobile-img {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
 //media
 
 @media screen and (max-width: 650px) {
+  header {
+    background-image: url("./imgs/mobile/image-header.jpg");
+  }
   .nav-item {
     display: none;
   }
 
   .bars {
     display: block;
+  }
+
+  .text-img {
+    flex-direction: column;
+  }
+  .reverse {
+    flex-direction: column-reverse;
+  }
+  .mobile-img {
+    display: block;
+  }
+  .desktop-img {
+    display: none;
   }
 }
