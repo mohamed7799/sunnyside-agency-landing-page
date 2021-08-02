@@ -1,3 +1,7 @@
+:root {
+  --src: "desktop";
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -17,6 +21,17 @@ li {
   list-style: none;
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", serif;
+}
+
+p {
+  font-family: "Barlow", sans-serif;
+  color: #818498;
+}
+
 header {
   color: white;
   background-image: url("./imgs/desktop/image-header.jpg");
@@ -26,6 +41,7 @@ header {
 }
 
 nav {
+  font-family: "Barlow", sans-serif;
   position: relative;
 }
 
@@ -37,7 +53,6 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem;
-  font-family: "Barlow", sans-serif;
 }
 
 .nav-item {
@@ -70,9 +85,7 @@ nav {
 }
 
 .mobile-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -116,90 +129,202 @@ nav {
 .header-content h1 {
   text-transform: uppercase;
   font-size: 3rem;
-  font-family: "Fraunces", serif;
   margin-bottom: 4rem;
   letter-spacing: 5px;
 }
 
-.hidden {
+.show {
   display: none;
 }
 
-.text-img {
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+}
+
+.grid-item-img img {
+  width: 100%;
+}
+
+.grid-item-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.text-img > * {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.text-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.text {
-  margin: 5rem;
+.text-wrapper {
+  width: 70%;
 }
 
-.text h2 {
-  color: #23303e;
-  font-family: "Fraunces", serif;
-  font-weight: bold;
-  font-size: 2rem;
+.text-wrapper h2 {
+  font-size: 2.5rem;
 }
 
-.text p {
+.text-wrapper p {
+  margin: 2rem 0rem;
   line-height: 1.6;
-  font-family: "Barlow", sans-serif;
+}
+
+.text-wrapper button {
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.text-wrapper button:hover:after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 5px;
+  border-radius: 30px;
+  margin-top: -5px;
+}
+
+.yellow::after {
+  background-color: #fad400;
+}
+
+.red::after {
+  background-color: #fe7867;
+}
+
+.background-img {
+  position: relative;
+}
+
+.background-img div {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+}
+
+.background-img div h2 {
+  color: #25564b;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.background-img div p {
+  color: #25564b;
+  line-height: 1.6;
+}
+
+.clints-test {
+  text-align: center;
+  padding: 10rem 4rem;
+}
+
+.clints-test h2 {
   color: #818498;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 1rem;
+}
+
+.clints-test ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.clints-test ul li {
+  padding: 1rem;
+}
+
+.clints-test ul li img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.clints-test ul li p {
   margin: 2rem 0rem;
 }
 
-.text button {
-  background: none;
-  cursor: pointer;
-  text-transform: uppercase;
-  border: none;
-  font-family: "Fraunces", serif;
+.clints-test ul span {
   font-weight: bold;
+  font-family: "Barlow", sans-serif;
+  color: #818498;
+  font-size: 0.7rem;
 }
 
-.red-line:hover {
-  text-decoration: underline;
-  -webkit-text-decoration-color: #fe7867;
-          text-decoration-color: #fe7867;
-  text-decoration-thickness: 5px;
+.clints-test ul span strong {
+  font-family: "Fraunces", serif;
+  font-size: 1rem;
+  color: #23303e;
 }
 
-.yellow-line:hover {
-  text-decoration: underline;
-  -webkit-text-decoration-color: #fad400;
-          text-decoration-color: #fad400;
-  text-decoration-thickness: 5px;
+.img-gallary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.img-gallary > * {
+  width: 100%;
+}
+
+footer {
+  font-family: "Barlow", sans-serif;
+  color: #23303e;
+  padding: 4rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #458c7e;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer ul > * {
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1rem;
 }
 
 .desktop-img {
-  width: 100%;
-  height: 100%;
   display: block;
 }
 
 .mobile-img {
-  width: 100%;
-  height: 100%;
   display: none;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 950px) {
   header {
     background-image: url("./imgs/mobile/image-header.jpg");
   }
@@ -209,22 +334,51 @@ nav {
   .bars {
     display: block;
   }
-  .text-img {
+  .show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+  .grid-item-text {
+    padding: 2rem;
+  }
+  .grid-item:nth-child(2) {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .text-wrapper {
+    text-align: center;
+    width: 100%;
+  }
+  .background-img div {
+    width: 90%;
+  }
+  .clints-test {
+    padding: 4rem;
+  }
+  .clints-test ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .reverse {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+  .img-gallary {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-  .mobile-img {
-    display: block;
+  .img-gallary img {
+    width: 50%;
   }
   .desktop-img {
     display: none;
+  }
+  .mobile-img {
+    display: block;
   }
 }

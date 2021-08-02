@@ -8,6 +8,14 @@ let bars = document.querySelector(".bars");
 let mobileNav = document.querySelector(".mobile-nav");
 
 document.addEventListener("click", (e) => {
-    check(e.target, "fa-bars") ? toggle(mobileNav, "hidden") : add(mobileNav, "hidden");
-    console.log(e.target)
+    if (check(e.target, "fa-bars")) {
+        toggle(mobileNav, "show");
+    }
+    else if (mobileNav.contains(e.target)) {
+        add(mobileNav, "show");
+    }
+    else {
+        remove(mobileNav, "show");
+    }
+
 })
