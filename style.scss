@@ -97,16 +97,15 @@ nav {
   padding: 2rem;
   background-color: white;
   color: $Dark-grayish-blue;
-  right: 3%;
-  left: 3%;
+  right: 5%;
+  left: 5%;
   font-family: "Barlow", sans-serif;
   text-align: center;
-  & li {
-    padding: 1rem;
-  }
+  gap: 1.5rem;
 
   & .selected {
     background-color: $Yellow;
+    padding: 1rem;
   }
 }
 
@@ -252,8 +251,11 @@ nav {
 
 .img-gallary {
   display: flex;
-  & > * {
-    width: 100%;
+  & > .desktop-img {
+    width: 25%;
+  }
+  & > .mobile-img {
+    width: 50%;
   }
 }
 
@@ -323,7 +325,7 @@ footer {
     width: 90%;
   }
   .clints-test {
-    padding: 4rem;
+    padding: 2rem 1rem;
   }
   .clints-test ul {
     flex-direction: column;

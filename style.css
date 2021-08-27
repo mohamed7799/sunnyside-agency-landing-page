@@ -97,18 +97,16 @@ nav {
   padding: 2rem;
   background-color: white;
   color: #818498;
-  right: 3%;
-  left: 3%;
+  right: 5%;
+  left: 5%;
   font-family: "Barlow", sans-serif;
   text-align: center;
-}
-
-.mobile-nav li {
-  padding: 1rem;
+  gap: 1.5rem;
 }
 
 .mobile-nav .selected {
   background-color: #fad400;
+  padding: 1rem;
 }
 
 .mobile-nav::after {
@@ -280,8 +278,12 @@ nav {
   display: flex;
 }
 
-.img-gallary > * {
-  width: 100%;
+.img-gallary > .desktop-img {
+  width: 25%;
+}
+
+.img-gallary > .mobile-img {
+  width: 50%;
 }
 
 footer {
@@ -360,7 +362,7 @@ footer ul > * {
     width: 90%;
   }
   .clints-test {
-    padding: 4rem;
+    padding: 2rem 1rem;
   }
   .clints-test ul {
     -webkit-box-orient: vertical;
